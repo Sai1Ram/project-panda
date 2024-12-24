@@ -1,31 +1,89 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import reel1 from "../assets/videos/reel-1.mp4";
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const ReelSection = () => {
+
   return (
-    <div className="h-screen text-center">
+    <div className="h-screen text-center text-white flex flex-col justify-center items-center gap-12 ">
+      <h1 className="lg:text-5xl text-3xl font-semibold">
+      Learn How To Create Edits Like These
+
+      </h1>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={4}
         spaceBetween={30}
+        depth={100}
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
-        className="w-4/5 border overflow-hidden"
+        autoplay={{
+          delay: 5000,
+        }}
+        loop={true}
+        modules={[Pagination, Navigation, Autoplay]}
+        className="w-4/5 overflow-hidden"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+        <video
+          className="w-full h-full object-cover rounded-xl"
+          autoPlay
+          loop
+          muted
+        >
+          <source src={reel1} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        </SwiperSlide>
+        <SwiperSlide><video
+          className="w-full h-full object-cover rounded-xl"
+          autoPlay
+          loop
+          muted
+        >
+          <source src={reel1} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video></SwiperSlide>
+        <SwiperSlide><video
+          className="w-full h-full object-cover rounded-xl"
+          autoPlay
+          loop
+          muted
+        >
+          <source src={reel1} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video></SwiperSlide>
+        <SwiperSlide><video
+          className="w-full h-full object-cover rounded-xl"
+          autoPlay
+          loop
+          muted
+        >
+          <source src={reel1} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video></SwiperSlide>
+        <SwiperSlide><video
+          className="w-full h-full object-cover rounded-xl"
+          autoPlay
+          loop
+          muted
+        >
+          <source src={reel1} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video></SwiperSlide>
+        <SwiperSlide><video
+          className="w-full h-full object-cover rounded-xl"
+          autoPlay
+          loop
+          muted
+        >
+          <source src={reel1} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video></SwiperSlide>
       </Swiper>
     </div>
   );

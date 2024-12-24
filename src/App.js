@@ -1,11 +1,14 @@
+import CourseCurriculum from "./components/CourseCurriculum";
 import HeroSection from "./components/HeroSection";
-// import ReelSection from "./components/ReelSection";
+import ReelSection from "./components/ReelSection";
 
 function App() {
   return (
     <div className="App">
       <HeroSection />
-      {/* <ReelSection /> */}
+      <ReelSection />  
+      <CourseCurriculum />
+      <div className="h-screen"></div>    
     </div>
   );
 }
