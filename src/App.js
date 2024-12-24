@@ -1,5 +1,5 @@
 import HeroSection from "./components/HeroSection";
-import ReelSection from "./components/ReelSection";
+// import ReelSection from "./components/ReelSection";
 
 function App() {
   return (
