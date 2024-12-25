@@ -3,11 +3,11 @@ import { FaCheckCircle } from "react-icons/fa";
 import { motion } from "framer-motion";
 const CourseCurriculum = () => {
   return (
-    <div className="text-white w-screen">
-      <div className="flex justify-center w-4/5 gap-6 mx-auto relative">
-        <div className="left w-2/3">
+    <div className="text-white w-screen lg:my-16 my-8 p-4">
+      <div className="flex justify-center lg:w-4/5 w-full gap-6 mx-auto relative lg:flex-row flex-col">
+        <div className="left lg:w-2/3 w-full">
           <h1 className="font-semibold text-4xl mb-6">The curriculum</h1>
-          <div className="bg-black p-6 rounded-lg drop-shadow-lg shadow-white custom-border">
+          <div className="bg-black lg:p-6 p-4 rounded-lg drop-shadow-lg shadow-white custom-border">
             <div className="flex items-center gap-6">
               <img
                 src={
@@ -16,11 +16,11 @@ const CourseCurriculum = () => {
                 alt=""
                 className="rounded-lg size-10"
               />
-              <h1 className="font-semibold text-3xl">
+              <h1 className="font-semibold lg:text-3xl text-xl">
                 Day 1 - Fundamentals of Reel Editing
               </h1>
             </div>
-            <p className="text-gray-300 my-4">
+            <p className="text-gray-300 my-4 lg:text-base text-sm">
               On the first day you will master the fundamentals of the reel
               editing to build a solid foundation before learn the advance
               topics.
@@ -28,21 +28,21 @@ const CourseCurriculum = () => {
             {[...Array(6)].map((_, index) => (
               <div
                 key={index}
-                className="module1 cursor-pointer mb-4 flex custom-border rounded-lg p-4 gap-4"
+                className="module1 cursor-pointer mb-4 flex custom-border rounded-lg lg:p-4 p-3 gap-4"
               >
-                <div className="left">
+                <div className="lg:block hidden">
                   <div className="flex justify-center items-center rounded-lg bg-gradient-linear w-16 h-16">
                     <FaCheckCircle size={30} />
                   </div>
                 </div>
                 <div className="">
-                  <h1 className="text-2xl font-semibold">
+                  <h1 className="lg:text-2xl text-lg font-semibold">
                     Module 1 -{" "}
                     <span className="uppercase">
                       Introduction to video editing
                     </span>
                   </h1>
-                  <p className="text-gray-300">
+                  <p className="text-gray-300 mt-2 lg:text-base text-sm">
                     Learn the basics of video editing and the tools you need to
                     get started. You will also learn how to import and organize
                     your footage. We will also cover the basics of video editing
@@ -57,7 +57,7 @@ const CourseCurriculum = () => {
            initial={{ rotateY: -90, opacity: 0 }}
            whileInView={{ rotateY: 0, opacity: 1 }}
            transition={{  duration: 1, ease: "easeInOut" }}
-        className="right w-1/3 sticky top-0 h-64 border bg-gradient-linear custom-border rounded-lg mt-6 p-6">
+        className="right lg:w-1/3 w-full sticky top-0 h-64 border bg-gradient-linear custom-border rounded-lg mt-6 p-6">
           <p className="text-gray-300 text-lg">Live master class</p>
           <h1 className="text-3xl font-bold my-4">Reel Editing</h1>
           <h1 className="text-3xl font-semibold ">
