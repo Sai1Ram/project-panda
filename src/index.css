@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root{
+  --darkBlue: rgb(31, 0, 84);
+  --black: rgb(0, 0, 0);
+  --primary: rgb(144, 79, 255);
+}
 body{
     background-color:#0d0d12;
     overflow-x: hidden;
@@ -11,9 +17,7 @@ body{
   padding: 0px;
   box-sizing: border-box;
 }
-.custom-border {
-  border: 1px solid rgb(43, 43, 43);
-}
+
 
 .pulsating-circle {
     position: absolute;

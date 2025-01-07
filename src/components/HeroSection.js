@@ -100,9 +100,9 @@ const HeroSection = () => {
           },
         }}
       >
-        <div className="border border-gray-300 rounded-xl flex lg:flex-row flex-col">
+        <div className="border border-borderColor rounded-xl flex lg:flex-row flex-col">
           <div className="left lg:p-6 p-4 flex w-72 gap-4">
-            <CiCalendar className="size-10" />
+            <CiCalendar className="size-10 text-primary" />
             <div className="">
               <span className="text-slate-300 font-light">DATES</span>
               <span className="block text-white text-xl">
@@ -110,23 +110,34 @@ const HeroSection = () => {
               </span>
             </div>
           </div>
-          <div className="right lg:border-l border-t lg:border-t-0 lg:p-6 p-4 w-72 flex gap-4">
-            <IoMdTime className="size-10" />
+          <div className="right lg:border-l border-t lg:border-t-0 border-borderColor  lg:p-6 p-4 w-72 flex gap-4">
+            <IoMdTime className="size-10 text-primary" />
             <div className="">
               <span className="text-slate-300 font-light">TIMING</span>
               <span className="block text-white text-xl">7PM - 9PM</span>
             </div>
           </div>
         </div>
-        <motion.button
-          className="rounded-xl bg-gradient-linear py-3 px-6 text-xl font-semibold cursor-pointer"
-          whileHover={{
-            scale: 1.05,
-            transition: { type: "spring", stiffness: 400, damping: 10 },
-          }}
-        >
-          Enroll Now
-        </motion.button>
+        <div className="flex  w-full justify-center gap-4">
+          <motion.button
+            className="rounded-lg w-52 bg-white text-black py-3 px-6 text-xl font-semibold cursor-pointer"
+            whileHover={{
+              scale: 1.05,
+              transition: { type: "spring", stiffness: 400, damping: 10 },
+            }}
+          >
+            Enroll Now
+          </motion.button>
+          <motion.button
+            className="rounded-lg w-52 border border-borderColor py-3 px-6 text-xl font-semibold cursor-pointer"
+            whileHover={{
+              scale: 1.05,
+              transition: { type: "spring", stiffness: 400, damping: 10 },
+            }}
+          >
+            Join Community
+          </motion.button>
+        </div>
       </motion.div>
     </div>
   );
